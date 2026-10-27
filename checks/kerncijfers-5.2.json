@@ -1,0 +1,4 @@
+{
+  "query": "EVALUATE SUMMARIZECOLUMNS(ROLLUPADDISSUBTOTAL(dim_kanaal[kanaal], \"is_totaal\"), TREATAS({2026}, dim_datum[jaar]), FILTER(VALUES(dim_datum[maand_nr]), dim_datum[maand_nr] <= 9), \"Omzet\", [Omzet], \"Omzet VJ\", [Omzet VJ], \"Groei\", [Omzet groei %], \"Status\", [Status], \"Omzet FC\", [Omzet Forecast], \"BM %\", [Brutomarge %], \"Bedrijfskosten\", [Bedrijfskosten], \"Netto\", [Nettowinst], \"Netto VJ\", [Nettowinst VJ], \"Netto FC\", [Nettowinst Forecast])",
+  "resultSetRowCountLimit": 500
+}

@@ -1,0 +1,39 @@
+{
+  "name": "immersive-sales-room",
+  "description": "A 3D sales dashboard you walk through, built as a Fabric App with Rayfin: a lobby, a sales room with KPI cards, a store map and a decomposition tree down to a single product, driven by DAX measures on a Fabric semantic model or by bundled sample data.",
+  "license": "MIT",
+  "author": "Gregory Moureau (illustrated.be)",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "template": {
+    "name": "universal-app",
+    "displayName": "✨ Use default template",
+    "description": "A lean React + Vite starter that grows into anything. A built-in capability router reads what you ask for, then enables the right Rayfin services, installs the right modules, and activates the right skills — CRUD apps, functions, charts, or Fabric analytics dashboards.",
+    "hidden": true
+  },
+  "scripts": {
+    "dev": "rayfin dev",
+    "dev:frontend": "npm run -w @rayfin-app/frontend dev",
+    "build": "npm run -w @rayfin-app/shared build && npm run -w @rayfin-app/data build && npm run -w @rayfin-app/frontend build",
+    "build:fabric": "npm run -w @rayfin-app/shared build && npm run -w @rayfin-app/data build && npm run -w @rayfin-app/frontend build:fabric",
+    "lint": "npm run -w @rayfin-app/frontend lint",
+    "preview": "npm run -w @rayfin-app/frontend preview",
+    "test": "npm run -w @rayfin-app/frontend test",
+    "test:watch": "npm run -w @rayfin-app/frontend test:watch",
+    "typecheck": "tsc -b",
+    "pack:add": "node scripts/scaffold.mjs",
+    "rayfin:up": "rayfin up",
+    "check:model": "node scripts/check-model.mjs",
+    "export:voorbeeld": "tsx scripts/export-voorbeeld.ts"
+  },
+  "devDependencies": {
+    "@microsoft/rayfin-cli": "^1.36.0-alpha",
+    "@microsoft/rayfin-guide": "^1.36.0-alpha",
+    "tsx": "^4.20.6",
+    "typescript": "~5.7.2"
+  }
+}
